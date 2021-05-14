@@ -4,7 +4,7 @@ import sqlite3
 import sqlalchemy
 
 # creating file path
-dbfile = 'C:/Users/Dell/Desktop/Yash/Machine Learning/Applied AI/[FreeCoursesOnline.Me] AppliedAICourse - Applied Machine Learning Course [UPDATE ONLY]/All Assignments Files/Mandatory Assignments Files/1/Db-IMDB.db'
+dbfile = 'C:/Users/Dell/Desktop/Yash/Machine Learning/Db-IMDB.db'
 # Create a SQL connection to our SQLite database
 try:
     conn = sqlite3.connect(dbfile)    
@@ -98,7 +98,8 @@ Actors_timeline = pd.read_sql_query("""
                                     """, conn)
                                     
 # Question 4
-# List all directors who directed 10 movies or more, in descending order of the number of movies they directed. Return the directors' names and the number of movies each of them directed.
+# List all directors who directed 10 movies or more, in descending order of the number of movies they directed. 
+# Return the directors' names and the number of movies each of them directed.
 Director_Movie_Count = pd.read_sql_query("""
                                          SELECT DISTINCT P.Name Director, Count(*) Number_of_movies
                                          FROM Person P
@@ -136,7 +137,8 @@ Percent_with_female = pd.read_sql_query("""
                                         """, conn)
 
 # Question 6
-# Find the film(s) with the largest cast. Return the movie title and the size of the cast. By "cast size" we mean the number of distinct actors that played in that movie: if an actor played 
+# Find the film(s) with the largest cast. Return the movie title and the size of the cast. 
+# By "cast size" we mean the number of distinct actors that played in that movie: if an actor played 
 # multiple roles, or if it simply occurs multiple times in casts, we still count her/him only once.
 
 Film_Biggest_CastSize = pd.read_sql_query("""
