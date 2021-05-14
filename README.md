@@ -16,7 +16,8 @@ movies they directed. Return the directors' names and the number of movies each 
 directed.
 
 5.a) For each year, count the number of movies in that year that had only female actors.
-6.5.b) Now include a small change: report for each year the percentage of movies in that 
+
+5.b) Now include a small change: report for each year the percentage of movies in that 
 year with only female actors, and the total number of movies made that year. For 
 example, one answer will be: 1990 31.81 13522 meaning that in 1990 there were 
 13,522 movies, and 31.81% had only female actors. You do not need to round your 
